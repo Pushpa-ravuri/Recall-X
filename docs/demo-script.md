@@ -1,0 +1,22 @@
+# RECALL-X: 3-Minute Demonstration Script ## Overview
+- **Product**: RECALL-X — AI Operational Experience Memory System
+- **Tagline**: *"Factories don't just lose data. They lose experience."*
+- **Role**: Decision-Support AI Agent (Human-in-the-loop, never controls machines directly). --- ## Timed Walkthrough ### 0:00 – 0:20 | The Problem & The Hook
+- **Presenter**: > *"Every factory floor generates millions of sensor readings, but when a machine begins to chatter or overheat, what matters isn't just raw data—it's experience. What did the previous shift try? What worked? What catastrophically failed? And critically: what conditions changed since then? Today, that tribal knowledge walks out the door. RECALL-X is an AI agent that captures, retrieves, and reasons over operational experience."* ### 0:20 – 0:50 | The Historical Precedent
+- Navigate to `/history` or `/memory`.
+- Point to **CNC-07** in January: > *"Notice this historical incident on CNC-07 machining AL-6061. An operator faced rough surface finish with Tool T-17 at 27°C. They reduced the feed rate from 450 to 410 mm/min: SUCCESS. Later, another operator tried increasing RPM: FAILED with violent resonance. Both experiences are retained in our Hindsight memory bank."* ### 0:50 – 1:30 | The New Incident
+- Navigate to `/analyze`.
+- Click preset: **"Demo 1: CNC Rough Surface (CNC-07)"**.
+- Show the telemetry parameters: - Machine: `CNC-07` - Problem: `Rough surface finish` - Material: `AL-6061` - Tool: `T-19` *(Notice: different from historical T-17)* - Temperature: `34°C` *(Notice: 7°C hotter than 27°C baseline)*
+- Click **[ANALYZE INCIDENT]**.
+- Live indicators transition: 1. *Analyzing incident...* 2. *Recalling operational experience from Hindsight...* 3. *Running 'What Changed?' engine...* 4. *Evaluating previous outcomes...* 5. *Synthesizing explainable recommendation...* ### 1:30 – 2:00 | The "What Changed?" Engine & AI Reasoning
+- Highlight the **"WHAT CHANGED?"** section: - `Tool`: T-17 → T-19 *(Severity: IMPORTANT)* - `Temperature`: 27°C → 34°C *(+25.9% Increase, Severity: IMPORTANT)*
+- Presenter points to the Explainability card: > *"A naive rule engine or basic RAG would simply echo: 'Reduce feed rate.' But RECALL-X reasons over the differences. The tool geometry is different, and the spindle is running 7 degrees hotter. Blindly copying the past solution risks tool deflection or thermal seizure."* ### 2:00 – 2:30 | The Recommendation
+- Read the AI Recommendation: > *"Recommendation for operator review: Inspect T-19 cutting edge for premature micro-wear and verify coolant concentration before applying historical feed-rate reduction to 410 mm/min. Do NOT increase RPM (previous attempt on CNC-07 triggered harmonic failure)."*
+- Highlight: - **WHY?**: Cites 2 successful incidents and 1 failed attempt. - **CONFIDENCE**: Clearly stated badge (HIGH/MEDIUM). - **SAFETY**: Clearly marked *"Recommendation for operator review — No direct machine control."* ### 2:30 – 2:50 | The Human Decision & Outcome Loop
+- Click **[RECORD OUTCOME]**.
+- Enter: - Action: *"Inspected T-19 insert—found chipped corner. Replaced insert and reduced feed rate to 410 mm/min."* - Result: **[ SUCCESS ]** - Root Cause: *"Chipped insert on T-19 combined with thermal expansion."* - Notes: *"Surface roughness restored to Ra 0.72 µm."*
+- Click **[Submit Outcome]**. ### 2:50 – 3:00 | "RECALL-X Learned"
+- Show notification: **"Hindsight Memory Bank Updated — RECALL-X Learned."**
+- Navigate to `/memory`: - Show the newly appended incident node in the **Experience Graph**. - Show the updated chronological **Timeline**.
+- **Closing**: > *"Next week, when another operator runs CNC-07 with T-19, RECALL-X will already know what worked. Experience recovered, institutional knowledge preserved."*
